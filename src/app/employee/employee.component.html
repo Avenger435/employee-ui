@@ -1,0 +1,72 @@
+<div class="container-sm my-5 border">
+
+    <form [formGroup]="form" (ngSubmit)="submit()">
+        <div class="container-sm b-3 mt-3">
+            <label class="form-label mt-3">Employee Details</label>
+            <div class="container-sm mb-3 border">
+                <label for="name" class="form-label mt-3">Name</label>
+                <input type="text" formControlName="name" class="form-control" id="email" placeholder="Enter name"
+                    name="name">
+                <label for="department" class="form-label">department:</label>
+                <input type="text" formControlName="department" class="form-control" id="pwd"
+                    placeholder="Enter department" name="department">
+                <br>
+            </div>
+        </div>
+
+        <div class="container-sm my-5 border">
+            <label class="form-label mt-3">Address Details</label>
+
+            <div class="container-sm mb-3 border" formGroupName="address">
+                <label for="address_type" class="form-label">Address type:</label>
+                <input type="text" formControlName="address_type" class="form-control" id="address_type"
+                    placeholder="Enter Address Type" name="address_type">
+
+                <label for="street" class="form-label">Street Name:</label>
+                <input type="text" formControlName="street" class="form-control" id="street"
+                    placeholder="Enter street name" name="street">
+
+                <label for="landmark" class="form-label">Landmark:</label>
+                <input type="text" formControlName="landmark" class="form-control" id="landmark"
+                    placeholder="Enter landmark name" name="landmark">
+                <label for="city" class="form-label">City:</label>
+                <input type="text" formControlName="city" class="form-control" id="city" placeholder="Enter city name"
+                    name="city">
+                <label for="state" class="form-label">State:</label>
+                <input type="text" formControlName="state" class="form-control" id="state"
+                    placeholder="Enter state name" name="state">
+                <label for="pincode" class="form-label">Pincode:</label>
+                <input type="text" formControlName="pincode" class="form-control" id="pincode"
+                    placeholder="Enter pincode" name="pincode">
+                <br>
+            </div>
+
+        </div>
+
+        <div class="container-sm my-5 border">
+            <label class="form-label mt-3">Insurance Details</label>
+            <div class="container-sm mb-3 border" formGroupName="insurance">
+                <label for="insurance_type" class="form-label">Insurance type:</label>
+                <input type="text" formControlName="insurance_type" class="form-control" id="insurance_type"
+                    placeholder="Enter Insurance Type" name="insurance_type">
+                <label for="plan_name" class="form-label">Plan name:</label>
+                <input type="text" formControlName="plan_name" class="form-control" id="plan_name"
+                    placeholder="Enter Plan name" name="plan_name">
+                <label for="premium" class="form-label">Premium:</label>
+                <input type="text" formControlName="premium" class="form-control" id="premium"
+                    placeholder="Enter premium" name="premium">
+                <label for="expiry_date" class="form-label">Expiry Date:</label>
+                <input id="expiry_date" formControlName="expiry_date" class="form-control" type="date" />
+                <label for="due_date" class="form-label">Due date:</label>
+                <input id="expiry_date" formControlName="due_date" class="form-control" type="date" />
+                <br>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+<div class="container">
+    <label class="form-label">Name: </label>
+    <h2>{{name}}</h2>
+</div>
